@@ -23,7 +23,7 @@ id - 주소에 전달 (속성값)
 name = "202호" value="소포" 
 
 * name vs id
-name 속성은 스크립트단에서 id 속성은 Server단에서 주로 사용된다.
+name 속성은 스크립트단에서, id 속성은 Server단에서 주로 사용된다.
 name 속성은 page 영역에서 중복 사용 가능 
                  / action에 해당하는 페이지에 전달할 수 있는 파라미터로 사용
                  /태그의 name 값이 키(Key)로 해서 값(Value)가 전송된다.
@@ -35,7 +35,11 @@ id 속성은 page 안에서 중복 사용 불가능 (so, id 속성의 값으로 
 id 속성으로 지정된 값은 server단에서 HttpServletRequest 파라미터로 전달받을 수 있다.
 전달받은 파라미터는 Map과 마찬가지로 Key-Value 형식으로 이루어져 있다.
 
+Parameter(파라미터) - 매개변수 -> 함수나 메서드 입력 변수(Variable)명
+Arguement(아규먼트) - 전달인자 -> 함수나 메서드 (호출시 전달 혹은 입력되는 실제) 입력 값(Value)
 
+입력순서 :
+form -> fieldset(with legend) -> lable -> input or textarea(with /textarea)
 
 
 테이블 태그 : thead tbody tfoot
