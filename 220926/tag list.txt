@@ -1,0 +1,23 @@
+h1 크게 진하게
+h2 작게 진하게
+h3 더 작고 진하게
+br 다음라인
+div 단락묶음
+p 줄나누기
+li 리스트
+ul 순서가 없는 리스트(unordered list)
+ol 순서가 있는 리스트(ordered list)
+a 링크 - 1.타서버url 2.내서버url 3.문서속성값(같은 웹페이지 내에서 다른 섹션으로 이동) (# = id지칭태그)
+img 이미지
+hr 선
+form
+input
+
+<!--주석내용-->
+tap 오른쪽으로
+shift + tab 왼쪽으로
+
+
+
+검사탭에서 제일 중요한 3가지 : 
+Elements Console Network

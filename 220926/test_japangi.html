@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*var score = prompt("점수를 입력하세요");
+        score = parseInt(score);
+        if (score >= 90) {
+            alert("A입니다");
+        } else if (score >= 80) {
+            alert("B입니다");
+        } else {
+            alert("F입니다");
+        }*/
+
+        /*var number = prompt("숫자를 입력하세요");
+        number = parseInt(number);
+        alert(number++);
+        number += 1;
+        document.write(number)*/
+
+        /*const str1 = (123.1).toString();
+        console.log(str1);
+        console.log(typeof(str1));
+        const str2 = String(123);
+        console.log(str2);
+        console.log(typeof(str2));*/
+
+        /*var a = 10 , b = 5;
+        var c = a + b;
+        const str1 = `${a} + ${b} = ${c}`;
+        const str2 = `${a} - ${b} = ${a-b}`;
+        const str3 = `${a} * ${c} = ${a*c}`;
+        console.log(str1)
+        console.log(str2)
+        console.log(str3)*/
+
+        /*var i = '커피' ;
+        for ( i=0 ; i<20 ; i++ ) {
+            console.log('커피');
+        }*/
+
+        /*document.write(" 2 x 1 = 2 <br>");
+        document.write(" 2 x 2 = 4 <br>");
+        document.write(" 2 x 3 = 6 <br>");
+        document.write(" 2 x 4 = 8 <br>");
+        document.write(" 2 x 5 = 10 <br>");
+        document.write(" 2 x 6 = 12 <br>");
+        document.write(" 2 x 7 = 14 <br>");
+        document.write(" 2 x 8 = 16 <br>");
+        document.write(" 2 x 9 = 18 <br>");*/
+
+       /* for (var i= 1; i <= 9; i++) {
+            document.write(" 2 x ", i, " = ", 2*i, '<br>');
+        }*/
+        
+        /*var number = prompt("구구단 몇 단을 보길 원하십니까?");
+        number = parseInt(number);
+        for (var i = 1; i <= 9; i++) {
+        document.write(` ${number} x ${i} = ${${number}*i} <br> `);*/
+
+       /*var number = prompt("구구단 몇 단을 보길 원하십니까?");
+        number = parseInt(number);
+        for (var i = 1; i <= 9; i++) {
+            const practice = `${number} * ${i} = ${number*i}`;
+            document.write(` ${practice} <br> `);
+        }*/
+       /* while(true){
+        var number = prompt("구구단 몇 단을 보길 원하십니까?");
+        number = parseInt(number);
+        if (isNaN(number)) {
+            alert("숫자를 입력하세요")
+            } else {
+                for (var i = 1; i <= 9; i++) {
+                    const practice = `${number} * ${i} = ${number*i}`;
+                    document.write(` ${practice} <br> `);
+                }
+            break;
+            }
+        }*/
+
+
+        /*var money = prompt("돈을 투입하세요");
+        var button = prompt("제품을 선택하세요. (1.콜라, 2.환타, 3.사이다)")
+        money = parseInt(money);
+
+        if (money > 700 && button == '1') {
+            document.write(`콜라, 거스름돈은 ${money - 700}원 입니다`);
+        } else if (money > 700 && button == '2') {
+            document.write(`환타, 거스름돈은 ${money - 800}원 입니다`);
+        } else if (money > 800 && button == '3') {
+            document.write(`사이다, 거스름돈은 ${money - 600}원 입니다`);
+        } else if (button >= '4') {
+            document.write(`선택하신 제품이 없습니다`);
+        } else {
+            document.write(`잔액이 부족합니다`);
+        }*/
+
+
+/* 1=콜라(700) 2=환타(800) 3=사이다(600)
+조건문만 써서 (반복문 사용x) 
+prompt로 돈은 한 번만 입력받는다
+변수 money에 입력받은 금액을 초기화한다
+버튼 계속 입력받음
+돈은 한 번만 입력받는다 (while 안에 - 초기식에
+버튼은 잔액이 제품가격보다 크게 남아있을 경우 누를 수 있다
+버튼 0을 누르면 잔액이 많아도 반복을 종료한다(if문 충족시 break로
+잔액이 3가지 제품가격의 최소금액보다 작으면 반복 종료(if문 충족시 break로
+위의 두 조건을 만족하지 않으면 반복한다.
+돈 1000원 1번선택시 -> 콜라, 거스름돈 300
+돈 300원 2번선택시 -> 잔액 부족
+돈 1000원, 5번 선택 -> 해당 제품x
+money = money - 제품가격
+if문, else if문, else를 사용 */
+
+       var money = prompt("돈을 투입하세요");
+        money = parseInt(money);
+        while(true) {
+            if (money < 600) {
+                document.write(`판매를 종료합니다. 거스름돈은 ${money}원 입니다. <br>`);
+                break;
+            } else {
+                var button = prompt(`제품을 선택하세요. (1.콜라, 2.환타, 3.사이다)  현재 잔액은 ${money}`);
+                if (button == 0) {
+                    document.write(`판매를 종료합니다. 거스름돈은 ${money}원 입니다. <br>`);
+                    break;
+                } else if (money >= 700 && button == '1') {
+                    money -= 700;
+                    document.write(`콜라, 거스름돈은 ${money}원 입니다 <br>`);
+                } else if (money >= 800 && button == '2') {
+                    money -= 800;
+                    document.write(`환타, 거스름돈은 ${money}원 입니다 <br>`);
+                } else if (money >= 600 && button == '3') {
+                    money -= 600;
+                    document.write(`사이다, 거스름돈은 ${money}원 입니다 <br>`);
+                } else if (button >= '4') {
+                    document.write(`선택하신 제품이 없습니다 <br>`);
+                    continue;
+                } else {
+                    document.write(`잔액이 부족합니다 거스름돈은 ${money}원 입니다. <br>`);
+                }
+            }
+        }
+
+
+
+        // const(상수)문으로 하면 원래는 안 되는게 정상인데 for문이니까 특별히 되는것, 평소에는 var(변수)문으로 할 것//
+
+        /*var i = 0;
+        while(i<3){
+            document.write("hello world! <br>");
+            i++
+        }*/
+
+        /*var i = 0;
+        while(true){
+            if (i == 3) {
+                break;
+            }
+            document.write("hello world! <br>");
+            i++
+        }*/
+
+
+        
+    </script>
+
+
+</head>
+<body>
+    <h1>점수 확인</h1>
+</body>
+</html>

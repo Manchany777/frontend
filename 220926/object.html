@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <script>
+        // var str = new String("Hello");
+        // console.log(str.length);
+        // str = str.toLowerCase();
+        // console.log(str.toUpperCase());
+        // console.log(str.toLowerCase());
+        // console.log(str.replace('e' , 'A'));
+    
+        /*function calculator(num1, op, num2) { //2번 - 문자열을 만들고// //P parameterh(매개변수) (함수를 정의)//    
+                                            //op = operator//
+            let result = num1 + op + num2 ; //3번 - result값 초기화 //// A argument(인자) (함수실행을 위해 던지는 것) //
+            console.log(result); //중간중간 결과 확인용도//
+            return eval(result); //4번 - 결과값 반환//
+        }
+        alert(calculator(3,'+',3)) //1번 - 지정// //5번 - 결과값 최종표시//*/
+
+
+
+    //     function calculator(num1, op, num2) {
+    //         let result = num1 + op + num2;
+    //         result = result + '=' + eval(result)
+    //         console.log(result);
+    //         document.querySelector("p").innerHTML = result;
+    //     }
+    // </script>
+
+    <script>
+    //     var total = 0;
+    //     var n1 = 100, n2 = 200;
+    //     var op = "+";
+
+    //     function cal(n1, op, n2) {
+    //         let res = eval(n1+op+n2);
+    //         return res;
+    //     }
+    //     function save(ret){
+    //         total += ret;
+    //     }
+
+    //     console.log(cal(n1, op, n2));
+    //     save(cal(n1, op, n2));
+    //     console.log(total);
+    // </script>
+
+    <script>
+    //     var str1 = new String("hello"); // new -> 객체타입
+    //     var str2 = "world"; // -> 문자타입 (쓰임새는 위와 같다)
+    //     var num1 = 100;
+    //     var bool1 = true;
+
+    //     console.log(typeof(str1));
+    //     console.log(typeof(str2));
+    //     console.log(typeof(num1));
+    //     console.log(typeof(bool1));
+
+    //     console.log(str1.length);
+    //     console.log(str2.length);
+    //     console.log(typeof(String(num1))); 
+    //     console.log(bool1.valueOf());
+    // </script>
+
+    <script>
+    //     var s = ["이순신" , "홍길동" , "박세리"]
+    //     var p = ["0000" ,"1111" , "2222"]
+
+    //     var s1 = "이순신", s2 = "홍길동", s3 = "박세리";
+    //     var p1 = "0000", p2 = "1111", p3 = "2222";
+
+    //     for(let i=0; i<3; i++) {
+    //         document.write(s[i] + ":" + p[i] + '<br>')
+    //     }
+    //     document.write(s[0] + p[0] + '<br>');
+    //     document.write(s[1] + p[1] + '<br>');
+    //     document.write(s[2] + p[2] + '<br>');
+
+
+   </script>
+
+    <script> //
+    // var s = ["이순신", "홍길동" , "박세리", "david" ,  "john" , "aaa" , "bbb"]
+    // var p = ["0000", "1111", "2222" , "3333" , "5555", 3,4 ]
+    // var a = [];
+    // for(let i=0; i<10; i++) {
+    //     a[i] = i;
+    // }
+    // for(let i=0; i<a.length; i++){
+    //     console.log(a[i]);
+    // }
+
+    // var lotto = [8, 3, 33, 6, 9, 10, 31];
+    // console.log(lotto);
+    // lotto.sort((a, b) => a - b); //내림차순
+    // console.log(lotto);
+
+//숫자 하나 -> size
+//숫자 여러개 -> element
+
+    // var arr = new Array(33, 44, 55, 66, 77, 88, 99, 10); // 대괄호를 대신 하는 말이 Array
+    
+    // for(let i=0; i<arr.length; i++) {
+    //     console.log(arr[i]);
+    // }
+    // console.log("indexing")
+    // console.log(arr[2]);
+    
+    // console.log(arr.length);
+    // arr.length = 2;
+    // console.log(arr.length);
+    // arr.length = 15;
+    // console.log(arr.length);
+   
+
+   
+
+
+    // for(let i=0; i<s.length; i++) {
+
+    //     document.write(s[i] + ":" + p[i] + '<br>')
+    // }  
+
+    // console.log(s.length);
+    // console.log(p.length);
+
+    // s[10] = 'data';
+    // s[100] = 'big data';
+
+    // console.log(s[10]);
+    // console.log(s[100]);
+
+    // console.log(s.length);
+</script>
+<script>
+    var now = new Date();
+    // var past = new Date("2003-09-01");
+    // var today = new Date('2022,9,30');
+
+    // console.log(typeof(now));
+    // console.log(now);
+    // console.log(past);
+    // console.log(today);
+
+    var month = now.getMonth() + 1;
+    var hour = now.getHours();
+    var miniutes = now.getMinutes();
+    var time = hour + ":" + miniutes;
+    // var str = '오늘은' + now.getFullYear() + '년' + month + '월 입니다'
+    // console.log(str);
+   
+   if(time > 'Nov','16:00') {
+    console.log(time)
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+   }
+   else {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'white';
+   }
+
+</script>
+
+<!-- <script>
+    for(let i=0; i<5; i++){
+        let num = Math.random()*100;
+        console.log(num)
+        console.log(Math.floor(num))
+        console.log(Math.ceil(num))
+        console.log(Math.round(num))
+    }
+</script> -->
+
+<script> // 변수 
+    var acc = new Object();
+    // console.log(typeof(acc));
+    // owner = '홍길동';
+    // code = '1111';
+    // balance = 35000;
+    // console.log(owner + code + balance);
+
+    acc.owner = '홍길동';
+    acc.code = '1111';
+    acc.balance = 35000;
+
+    console.log(acc);
+    console.log(acc.owner);
+    console.log(acc.code);
+    console.log(acc.balance);
+    console.log("당신의 잔액은 " + acc.balance + " 입니다");
+
+    function inquiry(money) {
+        console.log("당신의 잔액은" + acc.balance + "입니다");
+    }
+
+    function deposit(money) {
+        // 숫자가 아닌 문자가 들어오면 ~~~~
+        acc.balance = acc.balance + money;
+        console.log("입금 완료 , 잔액은 " + acc.balance + " 입니다");
+    }
+    function withdraw(money) {
+        if(isFinite(money)) {
+        if (money > acc.balance) {
+        console.log("잔액이 부족합니다.")
+        }
+        else {
+        acc.balance = acc.balance - money;
+        console.log("출금 완료 , 당신의 잔액은" + acc.balance + "입니다");
+        }
+        // 잔액보다 큰 금액은 인출 안되게 
+        // 숫자가 아닌 문자가 들어오면 ~~~~
+        }
+    }
+    acc.inquiry = inquiry;
+    acc.deposit = deposit;
+    acc.withdraw = withdraw;
+
+    console.log(acc);
+    console.log(acc.code);
+    console.log(acc.balance);
+    console.log(acc.owner);
+    acc.inquiry();
+    acc.deposit(5000);
+    acc.withdraw(10000);
+</script>
+
+<h1>계산기 함수 작성</h1>
+<input type="text" id="num1">
+<input type="text" id="op">
+<input type="text" id="num2">
+<button onclick = "calculator(3,'+',3)">계산식</button>
+<button></button>
+<p></p>
+</body>
+</html>

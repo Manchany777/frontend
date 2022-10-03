@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 : 로그인</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <style type="text/css">
+        fieldset.inline {
+          display: inline;
+        }
+      </style>
+</head>
+<body>
+    <img src="naver_logo2.jpg" width="350" height="200" alt="네이버로고"><br>
+    <fieldset class="inline">
+        <h1 style="color: blueviolet;">개인정보 수집</h1>
+        <form action="" method="get">
+            <fieldset class="info"> 
+                <legend>성별</legend>
+                <input type="radio" name="gender" value="1" id="r1"> 
+                <label for="r1">남자</label>
+                <input type="radio" name="gender" value="2" id="r2">
+                <label for="r2">여자</label>
+            </fieldset>
+
+            <fieldset class="info"> 
+                <legend>음식</legend>
+                <input type="radio" name="food" value="1" id="f1"> 
+                <label for="f1">짜장면</label>
+                <input type="radio" name="food" value="2" id="f2">
+                <label for="f2">짬뽕</label>
+                <input type="radio" name="food" value="3" id="f3">
+                <label for="f3">볶음밥</label>
+            </fieldset>
+            
+            <fieldset> 
+            <legend>취미</legend>
+            <label>
+                <input type="checkbox" name="hobby" value="1">HTML
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="2">CSS
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="3">Javascript
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="4">Vue.js
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="5">React
+            </label>
+            </fieldset><br>
+
+            <label for="reg">지역</label>
+            <select name="region" id="reg">
+                <option value="1">서울</option>
+                <option value="2">경기</option>
+                <option value="3">강원</option>
+                <option value="4">충청</option>
+                <option value="5">대구</option>
+            </select><br><br>
+            <button type="disabled">Disabled</button>
+            <button type="reset">Reset</button>
+
+            <button type="submit">제출</button>
+            <!--input type="submit" value="제출"-->
+            <button type="submit">
+                <img src="naver_logo.png" alt="네이버">
+                제출
+            </button><br><br>
+        
+        </form>
+
+        
+    </fieldset>
+</body>
+</html>

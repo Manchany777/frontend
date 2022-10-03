@@ -1,0 +1,60 @@
+CSS 문법방식 3가지
+h1{color:red;}
+ #id selector
+.class selector
+
+CSS 인라인 리스트
+img
+a
+span
+strong
+em
+블록 방식 태그
+div
+p
+h1
+
+id 유일한 속성
+class 그 안의 하위속성들
+
+
+유일한 것 = id
+여러개 나오는 것 = class
+
+비활성화(주석 처리)
+CSS /* */
+HTML !-- --
+
+태그, 아이디, 클래스 선택자 많이 사용
+
+조합선택자 - 그룹, 자식, 하위 선택자 많이 사용
+
+가상클래스선택자 많이 사용 -   visited, hover, active, checked, inabled, focus, child
+
+
+적용순서 브라우저 디폴트 -> 마이스타일css -> 인라인순
+
+*실전 외부 스타일 시트 적용 디자인은 bootstrap cdn 참조
+
+
+6-1,3,5 중요
+rgb에서 alpha는 투명도
+
+
+7-3 @media 쿼리
+@media not|only media type and (media feature) and or , (media feature) {CSS-Code;}
+	          (all, screen, printe 등)
+
+media type : 
+max-width 최대 800까지 적용 = 800px 이하의 좁은 화면에서
+min-width 최소 800부터 적용 = 800px 이상의 넓은 화면에서 
+
+
+
+
+
+
+
+1. incline-block으로 dissplay 속성 활용
+2. border로 테두리 그리기
+3. 시멘틱 태그로 구조 표현하기 header, nav, section

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*var score = prompt("점수를 입력하세요");
+        score = parseInt(score);
+        if (score >= 90) {
+            alert("A입니다.");
+        } else if (score >= 80) {
+            alert("B입니다.");
+        } else {
+            alert("F입니다.");
+        }*/
+
+        /*var number = prompt("숫자를 입력하세요");
+        number = parseInt(number);
+        alert(number++);*/
+        /*const str1 = (123.1).toString();
+        console.log(str1);
+        console.log(typeof(str1));
+        const str2 = String(123);
+        console.log(str2);
+        console.log(typeof(str2));*/
+
+        /*var a = 10 , b = 5;
+        var c  = a + b;
+        const str1 = `${a} + ${b} = ${a+b}`;
+        const str2 = `${a} - ${b} = ${a-b}`;
+        console.log(str1);
+        console.log(str2);*/
+
+        /*for ( 초깃값 ; 조건식 ; 증감식 ){
+            반복실행할 문장;
+        }*/
+        
+        /*document.write(" 2 X 1 = 2 <br>");
+        document.write(" 2 X 2 = 4 <br>");
+        document.write(" 2 X 3 = 6 <br>");
+        document.write(" 2 X 4 = 8 <br>");
+        document.write(" 2 X 5 = 10 <br>");
+        document.write(" 2 X 6 = 12 <br>");
+        document.write(" 2 X 7 = 14 <br>");
+        document.write(" 2 X 8 = 16 <br>");
+        document.write(" 2 X 9 = 18 <br>");*/
+
+        /*while(true){
+            var dan = parseInt(prompt("구구단 몇단을 출력할까요 ? "));
+            dan = parseInt(dan);
+            if (isNaN(dan)) {
+                alert("숫자를 입력하세요.");   
+            } else {
+                
+                for (var i = 1; i <= 9 ; i++ ){
+                    document.write(`${dan} X ${i} = ${dan*i} <br>`);
+                }
+                break;
+            }
+        }*/
+
+
+        //1) 초기식
+        //2) while (조건식) {
+        //3)     반복실행할 문장;
+        //4)     증감식;
+        //5) }
+
+        /*var i = 0;
+        while(i<3){
+            document.write("hello, world<br>");
+            i++;
+        }*/
+
+        // 제품은 콜라, 환타, 사이다
+        // 1 = 콜라, 2 = 환타 , 3 = 사이다
+        //     700       800        600
+        // 돈 = 1000 , 1 번 선택 => 콜라, 거스름돈 300
+        // 돈 = 300 , 2 번 선택 => 잔액이 부족
+        // 돈 = 1000 , 5 번 선택 => X
+        // prompt 로 돈과 버튼 2번 입력받음
+        // if , else if 문, else 를 이용
+        var money = prompt("돈을 투입하세요.")
+        var button = prompt("제품을 선택하세요.(1:콜라,2:환타,3:사이다)")
+
+        if ( money >= 700 && button == '1') {
+            document.write(`콜라. 거스름돈은 ${money - 700} 원 입니다.`);
+        } else if ( money >= 800 && button == '2') {
+            document.write(`환타. 거스름돈은 ${money - 800} 원 입니다.`);
+        } else if ( money >= 600 && button == '3') {
+            document.write(`사이다. 거스름돈은 ${money - 600} 원 입니다.`);
+        } else if (button >= '4') {
+            document.write('선택하신 제품이 없습니다.');
+        } else {
+            document.write('잔액이 부족합니다.');
+        }
+
+    </script>
+
+</head>
+<body>
+   <h1>점수 확인</h1> 
+</body>
+</html>

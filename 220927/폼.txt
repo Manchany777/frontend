@@ -1,0 +1,44 @@
+<form action="" method="get or post">
+get - 보안x (적지 않을시 디폴트)
+post -  보안o
+
+
+1.html -> 왜 span 값이 블록으로?
+
+<input 속성값> ????
+name - 레이블 묶음 (문자열 서버로) (lable for="" 값이랑 동일해야)
+value - 서버에 표시 (보통 1,2,3 등으로 표시)
+id - 주소에 전달 (속성값)
+
+* input 태그 - 기본적으로 양식에 쓰는 태그입니다. (이와 비슷한 역할을 하는 태그는 select 와 textarea 등)
+*name vs value
+- name : 서버에 전달되고자 하는 변수 이름
+공통적으로 name 은 양식의 이름을 뜻합니다. 폼전송을 할 때, name에 기재된 명칭으로 양식 키를 결정하죠. (비슷하게 id,class,테그호출 등이 있다.)
+- value : 서버에 전달되고자 하는 변수 값
+공통적으로 value 는 양식의 값을 뜻합니다. 폼전송을 할 때, name=value 식으로 전송해서 양식명과 양식 값을 전송합니다.
+서버에서 name 명으로 꺼낸 값에는 value 에 해당하는 값이 들어있어요
+(즉, type=submit 으로 설정할 경우 해당 버튼을 누르면 해당 name=value 로 폼 전송됩니다.)
+우편물에 비유하자면 다른 페이지를 아파트라 한다면 
+인풋태그에 name 은 해당 호수라 볼 수 있고 value는 내용물 입니다.
+name = "202호" value="소포" 
+
+* name vs id
+name 속성은 스크립트단에서 id 속성은 Server단에서 주로 사용된다.
+name 속성은 page 영역에서 중복 사용 가능 
+                 / action에 해당하는 페이지에 전달할 수 있는 파라미터로 사용
+                 /태그의 name 값이 키(Key)로 해서 값(Value)가 전송된다.
+id 속성은 page 안에서 중복 사용 불가능 (so, id 속성의 값으로 주로 접근한다. 
+                                                      name 속성으로도 JavaScript를 통해 속성이나 값을 변경할 수는 있음) 
+            / 주로  JavaScript에서 다루기 위해 지정
+
+
+id 속성으로 지정된 값은 server단에서 HttpServletRequest 파라미터로 전달받을 수 있다.
+전달받은 파라미터는 Map과 마찬가지로 Key-Value 형식으로 이루어져 있다.
+
+
+
+
+테이블 태그 : thead tbody tfoot
+--> table에서 순서 바꿔도 의미전달에는 변함없게
+
+시멘틱 태그 : header article footer aside(광고) section nav main

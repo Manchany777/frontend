@@ -1,0 +1,46 @@
+body {
+    background-color: #B43104;
+}
+/* p {
+    background-color: silver;
+} */
+
+h1 {
+    border: 1px solid white;
+    padding: 10px;
+}
+li {
+    margin: 20px gold;
+    display: inline;
+}
+
+#tim {
+    background-color: yellowgreen;
+}
+#BTS {
+    background-color: green;                
+}
+.tim , .BTS {
+    color: white;
+}
+ol>li {
+    background-color: powderblue;
+}
+ul a {
+    background-color: pink;
+}
+
+a:link {
+    color: blue;
+}
+a:visited {
+    color: red;
+}
+
+.info {
+    display: inline-block;
+    width: 43%;
+}
+span {
+    display: block;
+}
