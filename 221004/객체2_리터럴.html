@@ -10,12 +10,52 @@
             background-color: bisque;
         }
     </style>
+    <script>
+        var acc = {
+            owner : "황기대",
+            code : "111",
+            balance : 35000,
+
+            inquiry : function () {
+                return this.balance;
+            },
+            deposit : function (money) {
+                this.balance += money;
+            },
+            withdraw : function (money) {
+                this.balance -= money;
+                return money;
+            }
+        };
+    </script>
 </head>
 <body>
     <h3>리터럴 표기법으로 사용자 객체 만들기</h3>
     <hr>
     <script>
+        document.write("계정 : ")
+        document.write(acc.owner + ", ")
+        document.write(acc.code + ", ")
+        document.write(acc.balance + "<br>")
 
+        acc.deposit(10000);
+        document.write("10000원 저금 후 잔액은 " + acc.inquiry() + "<br> ");
+        acc.withdraw(5000);
+        document.write("5000원 인출 후 잔액은 " + acc.inquiry() + "<br> ");
+    </script>
+    <script>
+        function meetAt(year, month, day){
+            if (arguments.length == 1){
+                return year+"년";
+            } else if (arguments.length == 2){
+                return year+"년 " + month + "월";
+            } else {
+                return year+"/"+month+"/"+day;
+            }
+        }
+
+        
+        document.write(meetAt(10, 2, 30));
     </script>
 </body>
 </html>

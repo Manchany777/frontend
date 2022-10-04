@@ -1,0 +1,45 @@
+cd + 디렉토리 주소 -> 윈도나 리눅스에서 디렉토리 체인지(폴더이동)
+dir -> 디렉토리 확인
+git init -> 깃 기본폴더 변경
+
+git config --global user.email "you@example.com"  -> 내 git허브 계정 기본셋팅
+git config --global user.name "Your Name" -> 한 줄씩
+
+git clone /로컬/저장소/경로 -> 초기 동기화 (로컬 저장소를 복제)
+get clone 사용자명@호스트:/원격/저장소/경로 (원격 서버의 저장소를 복제)
+
+git pull  -> 깃에서 컴터로 가져올때
+
+git push -> 컴터에서 깃으로 업로드
+# git add .        -> .은 모든 파일, 특정파일만 올리려면 특정파일 이름 적어라 (maybe?)
+# git commit -m "메시지 내용"
+# git push origin 브랜치명
+(git pull과 push는 초기 연결 된 후에 명령어입니다)
+
+
+<새로운 브랜치 만들 때>
+$ git branch issue1 -> issue1 이라는 이름으로 브랜치 생성
+$ git branch   -> 옵션을 지정하지 않고 branch 명령어를 실행하면 브랜치 목록 전체를 확인할 수 있다.
+       issue1        앞 부분에 * 이 붙어있는 것이 현재 선택된 브랜치입니다.
+     * master
+
+git status -> 버전관리 대상 파일들의 상태를 파악 (명령어가 동작하지 않을 때 에러 확인,
+                 내가 작업한 파일 외에 다른 파일이 수정되진 않았는지 확인)
+.gitignore -> 불필요한 파일들이 원격 저장소에 올라가는 것을 방지
+
+
+
+
+<간단 요약>
+git init
+새로운 local repository 생성
+git add
+변경된 파일을 storage에 추가
+git commit
+add한 파일을 local repository에 저장 
+git push
+local repository를 remote repository에 업로드
+git branch -d branchname -> 브런치 삭제
+
+
+https://backlog.com/git-tutorial/kr/stepup/stepup1_1.html
