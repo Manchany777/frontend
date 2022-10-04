@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+ <script>
+    var acc = {
+        owner : '홍길동', //속성 3개//
+        code : '101-39-777777',
+        balance : 35000,
+
+        inquiry : function() { //함수 3개//
+            console.log(this === window);
+            console.log(this);
+            console.log("당신의 잔액은 " + this.balance + " 입니다.");
+        } ,
+    
+        deposit : function(money) {
+            // 숫자가 아닌 문자가 들어오면 ~~~~
+            if(isFinite(money)) {
+                this.balance = this.balance + money;
+                console.log("입금 완료 , 잔액은 " + this.balance + " 입니다.");
+            } else {
+                console.log("입력오류");
+            }
+        } ,
+
+        withdraw : function(money) {
+            // 잔액보다 큰 금액은 인출 안되게, 숫자가 아닌 문자가 들어오면 ~~~~
+            if(isFinite(money)) {
+                if (acc.balance < money) {
+                    console.log("잔액이 부족합니다.");
+                } else {
+                    this.balance = this.balance - money;
+                    console.log("출금 완료 , 잔액은 " + this.balance + " 입니다.");
+                } 
+            } else {
+                console.log("입력오류");
+            }
+        }
+    }
+    console.log(this);
+ </script>
+
+<script>
+    console.log('예금주는 ' + acc.owner + "입니다.");
+    console.log('계좌번호는 ' + acc.code + "입니다.");
+    console.log('잔액은 ' + acc.balance + "입니다.");
+    acc.inquiry();
+    acc.deposit(10000);
+    acc.withdraw(10000);
+ </script>
+</body>
+</html>

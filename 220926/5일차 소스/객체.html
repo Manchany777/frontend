@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    //    var str = new String("HELLO");
+    //    console.log(str.length);
+    //    str = str.toLowerCase();
+    //    console.log(str.toLowerCase());
+
+     function calculator(num1, op, num2) {
+        let result = num1 + op + num2 ;
+        result = result + '='+ eval(result)
+        console.log(result);
+        document.querySelector("p").innerHTML = result;
+     }
+
+    </script>
+
+
+    <script>
+        // var total = 0;
+        // var n1 = 100, n2 = 200;
+        // var op = "+";
+
+        // function cal(n1, op, n2){
+        //     let res = eval(n1 + op + n2);
+        //     console.log(total);
+        //     console.log(res);
+        //     return res;
+        // }
+
+        // function save(ret){
+        //     total += ret;
+        // }
+
+        // //console.log(res);
+        // var s = cal(20,"+",10)
+        // console.log(res);
+
+    </script>
+
+    <h1>계산기 함수 작성</h1>
+    <input type="text" id="num1">
+    <input type="text" id="op">
+    <input type="text" id="num2">
+    <button onclick = "calculator(3,'+',3)">계산식</button>
+    <p></p>
+
+
+    <script>
+
+        // var str1 = new String("hello");
+        // var str2 = 300 + '';
+        // var num1 = 100;
+        // var bool1 = true;
+
+        // console.log(str1 + typeof(str1));
+        // console.log(str2 + typeof(str2));
+        // console.log(typeof(num1));
+        // console.log(typeof(bool1));
+
+        // console.log(str1.length);
+        // console.log(str2.length);
+        // console.log(typeof(num1.toString()));
+        // console.log(bool1.valueOf());
+    </script>
+
+    <script>
+        // var s = ["이순신" ,  "홍길동" , "박세리","david", "john", "aaa", "bbb"]
+        // var p = [ "0000", "1111" , "2222","3333", "4444", 3,4]
+        // var a = [];
+        // var b = new Array();
+        // var arr = new Array(34,123,83,1,32,14,"hello", 324,123,41,234,134,1,3214);
+        // var c = [];
+
+        // var lotto = [30,3,11,22,40,7];
+        // console.log("정렬전")
+        // console.log(lotto);
+        // lotto.sort((a, b) =>  a - b)    
+        // console.log("정렬후")        
+        // console.log(lotto);
+
+        // console.log("변경전")
+        // console.log(arr.length);
+        // arr.length = 2;
+        // console.log("변경후")
+        // console.log(arr.length);
+
+        // for(let i=0; i<arr.length; i++){
+        //     console.log(arr[i]);
+        // } 
+        // arr.length = 14;
+        // console.log("다시 변경후")
+        // console.log(arr.length);
+ 
+        // for(let i=0; i<arr.length; i++){
+        //     console.log(arr[i]);
+        // } 
+
+        // for(let i=0; i<a.length; i++){
+        //     a[i] = a[i] * 10 ;
+        // }
+
+        // for(let i=0; i<a.length; i++){
+        //     console.log(a[i]);
+        // }  
+
+        // for(let i=0; i<s.length; i++){
+        //     document.write(s[i] + ":"+ p[i] + '<br>');
+        // }
+
+        // console.log(s.length)
+        // console.log(p.length)
+
+        // s[10] = 'data';
+        // s[100] = 'big data';
+
+        // console.log(s[10])
+        // console.log(s[100])
+
+        // console.log(s.length);
+
+    </script>
+
+    <script>
+        // var now = new Date();
+        // var past = new Date("2003-09-01");
+        // var today = new Date("2022/10/02");
+
+        // console.log(typeof(now));
+        // console.log(now);
+        // console.log(past);
+        // console.log(today);
+
+        // var month = now.getMonth() + 1;
+        // var hour = now.getHours();
+        // var minutes = now.getMinutes();
+        // var time = hour + ":" + minutes;
+        // var day = today.getDay();
+        // console.log(day);
+        // var str = '오늘은 ' + now.getFullYear() + '년' + month + '월입니다.';
+        // console.log(str);
+        // console.log(hour);
+        // console.log(minutes);
+        // console.log(now.toTimeString());
+        // console.log(now.toString());
+ 
+        // if (time >= '16:00') {
+        //     document.body.style.backgroundColor = 'black';
+        //     document.body.style.color = 'white';
+        // } else {
+        //     document.body.style.backgroundColor = 'white';
+        //     document.body.style.color = 'black';              
+        // }
+
+ </script>
+
+
+ <script>
+    // for(let i=0; i<5 ; i++) {
+    //     let num = Math.random()*100;
+    //     console.log(num);
+    //     console.log(Math.floor(num))
+    // }
+ </script>
+
+ <script>
+    var acc = new Object();
+    console.log(typeof(acc));
+    owner = '홍길동';
+    code = '1111';
+    balance = 35000;
+    console.log(owner + code + balance);
+
+    acc.owner = '홍길동' ;
+    acc.code = code;
+    acc.balance = balance;
+
+    function inquiry() {
+        console.log("당신의 잔액은 " + acc.balance + " 입니다.");
+    } 
+
+    acc.inquiry = inquiry;
+
+    acc.deposit = function deposit(money) {
+        // 숫자가 아닌 문자가 들어오면 ~~~~
+        if(isFinite(money)) {
+            acc.balance = acc.balance + money;
+            console.log("입금 완료 , 잔액은 " + acc.balance + " 입니다.");
+        } else {
+            console.log("입력오류");
+        }
+    }
+    acc.withdraw = function withdraw(money){
+        // 잔액보다 큰 금액은 인출 안되게
+        // 숫자가 아닌 문자가 들어오면 ~~~~
+        if(isFinite(money)) {
+            if (acc.balance < money) {
+                console.log("잔액이 부족합니다.");
+            } else {
+                acc.balance = acc.balance - money;
+                console.log("출금 완료 , 잔액은 " + acc.balance + " 입니다.");
+            }
+        } else {
+            console.log("입력오류");
+        }
+    }
+
+    console.log(acc);
+ 
+    acc.inquiry();
+    acc.deposit(5000);
+    acc.deposit("aaa");
+    acc.withdraw("aaa");
+    acc.withdraw(6000);
+    acc.withdraw(100000);
+ </script>
+
+</body>
+</html>

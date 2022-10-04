@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 프로토타입 함수 선언
+        // 학교, 학번, 이름, 학과 <= 속성
+        // data <== 메소드 (본인의 정보를 말한다.)
+        function Student(univ, number, name, department) {
+            this.univ = univ;
+            this.number = number;
+            this.name = name;
+            this.department = department;
+            this.grade = 1;
+
+            this.data = function() {
+                console.log(this.univ + "의 " + this.department + "학과" + this.number + "학번의" + this.name +"입니다. ")
+                console.log(`${this.univ}의 ${this.department}학과 ${this.number}학번의 ${this.name}입니다. `)
+            }
+
+            this.year = function () {
+                this.grade ++;
+                if (this.grade>4){
+                    console.log('졸업');    
+                } else {
+                    console.log(`${this.grade} 학년이 되었음`);
+                } 
+            }
+        }
+
+        // 프로토타입 함수 호출로 객체 생성
+        var std = new Array();
+
+        for(let i=0; i<10; i++){
+            std[i] = new Student('한국대', i+1, i+1, '체육');
+        }
+     
+        // 생성한 객체의 property 확인 및 객체의 메소드 실행
+
+        for(let i=0; i<10; i++){
+            console.log(std[i].name);
+            std[i].year();
+        }
+
+        for(let i=0; i<10; i++){
+            console.log(std[i].name);
+            std[i].year();
+        }
+
+        for(let i=0; i<10; i++){
+            console.log(std[i].name);
+            std[i].year();
+        }
+
+        for(let i=0; i<10; i++){
+            console.log(std[i].name);
+            std[i].year();
+        }
+    </script>
+</body>
+</html>

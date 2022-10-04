@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+ <script>
+   function Account(owner, code, balance)  {
+        this.owner = owner;
+        this.code = code;
+        this.balance = balance;
+        this.inquiry = function () {
+                    console.log("당신의 잔액은 " + this.balance + " 입니다.");
+                    } ;
+
+        this.deposit = function (money) { // 익명함수
+                    // 숫자가 아닌 문자가 들어오면 ~~~~
+                    if(isFinite(money)) {
+                        this.balance = this.balance + money;
+                        console.log("입금 완료 , 잔액은 " + this.balance + " 입니다.");
+                    } else {
+                        console.log("입력오류");
+                    }
+                } ;
+
+        this.withdraw = function (money){
+                        // 잔액보다 큰 금액은 인출 안되게, 숫자가 아닌 문자가 들어오면 ~~~~
+                        if(isFinite(money)) {
+                            if (this.balance < money) {
+                                console.log("잔액이 부족합니다.");
+                            } else {
+                                this.balance = this.balance - money;
+                                console.log("출금 완료 , 잔액은 " + this.balance + " 입니다.");
+                            }
+                        } else {
+                            console.log("입력오류");
+                        }
+                    } ;
+        }
+
+    var acc1 = new Account('홍길동', '111-22-333333', 35000);
+    var acc2 = new Account('박세리', '111-22-444444', 10000);
+    var acc3 = new Account('황희찬', '111-22-555555', 20000);
+ </script>
+
+ <script>
+    console.log('예금주는 ' + acc1.owner + " 입니다.")
+    console.log('계좌번호는 ' + acc1.code + " 입니다.")
+    console.log('잔액은 ' + acc1.balance + " 원     입니다.");
+    acc1.inquiry();
+    acc1.deposit(10000);
+    acc1.withdraw(10000);
+
+    console.log('예금주는 ' + acc2.owner + " 입니다.")
+    console.log('계좌번호는 ' + acc2.code + " 입니다.")
+    console.log('잔액은 ' + acc2.balance + " 원 입니다.");
+    acc2.inquiry();
+    acc2.deposit(10000);
+    acc2.withdraw(10000);
+
+    console.log('예금주는 ' + acc3.owner + " 입니다.")
+    console.log('계좌번호는 ' + acc3.code + " 입니다.")
+    console.log('잔액은 ' + acc3.balance + " 원 입니다.");
+    acc3.inquiry();
+    acc3.deposit(10000);
+    acc3.withdraw(10000);
+ </script>
+</body>
+</html>

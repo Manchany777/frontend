@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자동차 - 프로토타입 함수 선언
+        // 제조사, 연식, 모델, 배기량, 색깔 <= 속성
+        // data <== 메소드 (자동의의 정보를 말한다.)
+        // go , back, speed, stop 
+        function Car(manuf, year, model, disp , color) {
+            this.manuf = manuf;
+            this.year = year;
+            this.model = model;
+            this.disp = disp;
+            this.color = color;
+            this.vel = 0;
+
+            this.data = function () {
+                console.log(this.model);
+            }
+
+            this.go = function(){
+                console.log(`속도 ${this.vel} 로 앞으로 감`);
+            }
+            
+            this.back = function(){
+                console.log(`속도 ${this.vel} 로 뒤로 감`);
+            }
+
+            this.stop = function(){
+                this.vel = 0;
+                console.log(`속도 ${this.vel} 로 멈춤`);
+            }
+
+            this.speed = function(vel){
+                if(this.vel + vel < 0){
+                    this.vel = 0;
+                } else {
+                    this.vel = this.vel + vel;
+                }
+                console.log(`속도가 ${this.vel} 으로 변함`);
+            }
+        }
+
+        // 프로토타입 함수 호출로 객체 생성
+        var c1 = new Car('현대', 2022, '아이오닉', 2000, 'Silver');
+        var c2 = new Car('테슬라', 2022, '모델Y', 3000, 'White');
+        // 생성한 객체의 property 확인 및 객체의 메소드 실행
+
+        c1.data();
+        c1.speed(-100);
+        c1.go();
+
+        c2.data();
+        c2.speed(160);
+        c2.go();
+
+        c1.stop();
+        c2.stop();
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Game(name, life, bullet) { // 게임 캐릭터 객체 만들기
+        this.name = name;                   // 속성 : 이름, 생명 100점, 생명 100점, 총알 10개
+        this.life = 100;
+        this.bullet = 10;
+        
+        // 메소드 : 총알쏘기(-1), 아이템획득(+100), 총알맞음(-30)
+        this.data = function() {
+            console.log(`캐릭터명: ${this.name} / 남은 생명: ${this.life} / 남은 총알수: ${this.bullet}`);
+        };
+        this.shoot = function () {
+            this.bullet --;
+            console.log(`총 발사, 현재 총알 ${this.bullet}개 남음`)
+        }
+        this.item = function () {
+            this.life += 100
+            console.log(`득템!! HP +100회복. 현재 남은 생명: ${this.life}`)
+        }
+        this.hit = function () {
+            this.life -= 30;
+            if (this.life <= 0) {
+                console.log('유다희');
+            } else {
+                console.log(`${this.name} 은(는) 공격 받았다! 현재 남은 생명: ${this.life}`)
+            }
+        }
+        
+        }
+        //만들어진 프로토타입으로 게임캐릭터 10개 만들기
+        var cha = new Array();
+
+        for(let i=0; i<10; i++) {
+            cha[i] = new Game(`마리오${i+1}`);
+            cha[i].data();   
+        }
+
+        for(let i=0; i<10; i++) {
+            for(let j=0; j<4; j++){
+                cha[i].hit();
+            }
+        }
+
+        // 2개 캐릭터의 속성과 메소드
+ 
+    </script>
+
+</body>
+</html>

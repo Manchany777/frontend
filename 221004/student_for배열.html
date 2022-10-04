@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Student(univ, id, name, major) { // 프로토타입 함수 선언                                 
+        this.univ = univ;                   // 학교, 학번, 이름, 학과 <= 속성(즉, 설계도)             
+        this.id = id;
+        this.name = name;
+        this.major = major;
+        this.grade = 1;
+
+        this.data = function() {              // data <== 메소드(=함수) (본인 정보를 말한다.)
+            console.log(this.name + '의 학교는 ' + this.univ + '이고 학번 및 학과는 ' + this.id + ', ' + this.major + ' 입니다.');
+            console.log(`${this.name}의 학교는 ${this.univ}이고 학번 및 학과는 ${this.id}, ${this.major}입니다.`);
+        };
+
+        this.year = function () {
+            this.grade ++;
+            if (this.grade > 4) {
+                console.log('졸업');
+            } else {
+                console.log(`${this.grade} 학년이 되었음`)
+            }
+        }
+    }
+        // 프로토타입 함수 호출로 객체 생성 (2~3개 정도)
+        var std = new Array();
+
+        for(let i=0; i<10; i++) {
+            std[i] = new Student('한국대', i+1, i+1, '체육학') //학교, 학번, 입학순서, 학과 순
+        }
+        std[0]=new Student('한국대', 1, 1, '체육학')
+        std[1]=new Student('한국대', 2, 2, '체육학')
+        std[2]=new Student('한국대', 3, 3, '체육학')
+        std[3]=new Student('한국대', 4, 4, '체육학')
+        std[4]=new Student('한국대', 5, 5, '체육학')
+        std[5]=new Student('한국대', 6, 6, '체육학')
+        std[6]=new Student('한국대', 7, 7, '체육학')
+        std[7]=new Student('한국대', 8, 8, '체육학')
+        std[8]=new Student('한국대', 9, 9, '체육학')
+        std[9]=new Student('한국대', 10, 10, '체육학')
+
+        console.log(typeof(acc1));
+        console.log(typeof(acc2));
+
+        // 생성한 객체의 property 내용 확인 및 객체의 메소드 실행
+        for(let i=0; i<10; i++) {
+            console.log(std[i].name);
+            std[i].year();
+        }
+
+        for(let i=0; i<10; i++) {
+            console.log(std[i].name);
+            std[i].year();
+        }
+
+        for(let i=0; i<10; i++) {
+            console.log(std[i].name);
+            std[i].year();
+        }
+
+        for(let i=0; i<10; i++) {
+            console.log(std[i].name);
+            std[i].year();
+        }
+        
+        // console.log(std[0].name);  <-- 위에거랑 같은거
+        // std[0].year();
+        // console.log(std[1].name);
+        // std[1].year();
+        // console.log(std[2].name);
+        // std[2].year();
+        // console.log(std[3].name);
+        // std[3].year();
+        // console.log(std[4].name);
+        // std[4].year();
+        // console.log(std[5].name);
+        // std[5].year();
+        // console.log(std[6].name);
+        // std[6].year();
+        // console.log(std[7].name);
+        // std[7].year();
+        // console.log(std[8].name);
+        // std[8].year();
+        // console.log(std[9].name);
+        // std[9].year();
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>팀 버너스리</title>
+        <link rel="stylesheet" href="mystyle.css">
+        <script>
+            function show(){
+                // 이미지가 보이게 한다.
+                document.getElementById('tim').src = 'tim.jpg'
+            }
+            function hide(){
+                // 이미지가 안보이게 한다.
+                document.getElementById('tim').src = ''
+            }
+        </script>
+    </head>
+    <body>
+        <h1 onmouseover="hide()">팀 버너스리</h1>
+        <ul>
+            <li><a href="1.html">1</a></li>
+            <li><a href="2.html">2</a></li>
+            <a href="3.html"><li>3</li></a>
+            <a href="4.html"><li>4</li></a>
+            <li><a href="https://naver.com">
+                    <img src="naver_logo.png" alt="네이버" width="80" height="60">
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <img src="tim.jpg" alt="팀 버너스리" id="tim"
+         width="400" height="300" onmouseover="show()">
+        <p>팀 버너스리 경(영어: Sir Tim Berners-Lee, OM, KBE, FRS, 1955년 6월 8일 ~ )은 영국의 컴퓨터 과학자이다.
+            1989년 월드 와이드 웹의 하이퍼텍스트 시스템을 고안하여 개발했다. 인터넷의 기반을 닦은 여러 공로로 웹의 아버지라고 불리는 인물 중 하나이다.
+           
+            URL, HTTP, HTML 최초 설계와 구현도 CERN 시절에 동료였던 로베르 카이오(Robert Cailliau) 등과 함께 그가 주도한 것이다.
+            
+            차세대 웹 기술인 시맨틱 웹 기술의 표준화에 힘쏟고 있다. 
+        </p>
+        <button onclick="show()">이미지 보이기</button> <button onclick="hide()">이미지 숨기기</button>
+    </body>
+</html>

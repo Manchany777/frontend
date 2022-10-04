@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gugudan() {
+            // prompt로 구구단 을 읽어오는 대신
+            // input tag 에 사용자가 입력한 값을 가져와야 함
+            var dan = document.getElementById("dan").value ;
+            if (isNaN(dan)) {
+                alert("숫자를 입력하세요.");   
+            } else {
+                var str = ''  ;
+                for (var i = 1; i <= 9 ; i++ ){
+                    // 문자열 str += 한줄;
+                    str += `${dan} X ${i} = ${dan*i} <br>`;
+                    //   document.write(`${dan} X ${i} = ${dan*i} <br>`);
+                }
+                // p element의 innerHTML 에 str 을 대입
+                document.querySelector("#result").innerHTML = str;
+                    
+            }
+        }
+     
+    </script>
+</head>
+<body>
+    <input type="password" id="dan">
+    <button onclick="gugudan()">구구단 실행하기</button>
+    <p id="result"></p>
+</body>
+</html>

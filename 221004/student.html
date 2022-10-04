@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Student(univ, id, name, major) { // 프로토타입 함수 선언                                 
+        this.univ = univ;                   // 학교, 학번, 이름, 학과 <= 속성(즉, 설계도)             
+        this.id = id;
+        this.name = name;
+        this.major = major;
+        this.grade = 1;
+
+        this.data = function() {              // data <== 메소드(=함수) (본인 정보를 말한다.)
+            console.log(this.name + '의 학교는 ' + this.univ + '이고 학번 및 학과는 ' + this.id + ', ' + this.major + ' 입니다.');
+            console.log(`${this.name}의 학교는 ${this.univ}이고 학번 및 학과는 ${this.id}, ${this.major}입니다.`);
+        };
+
+        this.year = function () {
+            this.grade ++;
+            if (this.grade > 4) {
+                console.log('졸업');
+            } else {
+                console.log(`${this.grade} 학년이 되었음`)
+            }
+        }
+    }
+        // 프로토타입 함수 호출로 객체 생성 (2~3개 정도)
+        var acc1 = new Student('서울대', '11-11111', '오바마', '인문학');
+        var acc2 = new Student('연세대', '22-22222', '트럼프', '경영학');
+        var acc3 = new Student('고려대', '33-33333', '바이든', '음악학');
+
+        console.log(typeof(acc1));
+        console.log(typeof(acc2));
+
+        // 생성한 객체의 property 내용 확인 및 객체의 메소드 실행
+        console.log(acc1.name);
+        acc1.data();
+        acc1.year();
+        acc1.year();
+        acc1.year();
+        acc1.year();
+        acc1.year();
+        acc1.year();
+        acc1.year();
+
+        console.log(acc2.name);
+        acc2.data();
+        acc2.year();
+        acc2.year();
+
+        console.log(acc3.name);
+        acc3.data();
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 : 로그인</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <img src="네이버.png" alt="네이버" height="60">
+
+    <fieldset>
+        <h1 style="color:violet;">개인정보 제공</h1>
+        <form action="" method="get">
+            <fieldset class="info">
+                <legend>성별 :</legend>
+                <input type="radio" name="gender" value="f" id="f">
+                <label for="f">여성</label> 
+                <input type="radio" name="gender" value="m" id="m">
+                <label for="m">남성</label>
+            </fieldset>
+
+            <fieldset class="info">
+                <legend>좋아하는 음식 :</legend>
+                <input type="radio" name="food" value="1" id="r1" checked>
+                <label for="r1">짜장면</label> 
+                <input type="radio" name="food" value="2" id="r2">
+                <label for="r2">짬뽕</label>
+                <input type="radio" name="food" value="3" id="r3">
+                <label for="r3">볶음밥 <br></label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>관심분야 :</legend>
+                <label>
+                    <input type="checkbox" name="tech" value="1">HTML
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="2">CSS
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="3">JAVASCRIPT
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="4">JAVA
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="5">MYSQL <br>
+                </label>
+            </fieldset>
+            <br><br>  
+            
+            <label for="reg">지역</label>
+            <select name="region" id="reg" multiple>
+               <option value="1">서울</option> 
+               <option value="2" selected>경기</option>
+               <option value="3">강원</option>
+               <option value="4">충청</option>
+            </select>
+            
+            <button type="reset">Reset</button>
+            <button type="submit">
+                <img src="naver_logo.png" alt="네이버">
+                제출
+            </button>
+
+
+            <!--input type="submit" value="제출"-->
+        </form>
+    </fieldset>
+</body>
+</html>
