@@ -26,3 +26,8 @@ shift + tab 왼쪽으로
 
 검사탭에서 제일 중요한 3가지 : 
 Elements Console Network
+
+
+# id
+. class
+ tag

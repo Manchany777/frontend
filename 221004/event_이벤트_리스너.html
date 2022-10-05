@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{float: left;}
+    </style>
+</head>     
+<body onload="change()">
+    <h1>이벤트는 언제 발생하는 거야?</h1>
+    <hr>
+        <img src="Tim.jpg" alt="분양견" width="200" height="200" >
+        <br>
+        <div>&nbsp;&nbsp;&nbsp;강아지를 분양합니다. <br>&nbsp;&nbsp;&nbsp;잘 키워주실 분 연락처 남겨주세요.</div> 
+        <hr>
+        <form action="" method="get">
+            <br>
+            <p> &nbsp;&nbsp;&nbsp;도시   
+                <label>            
+                    <input type="radio" name="city" value="1"> 서울
+                </label>
+                <input type="radio" name="city" value="2" id="r2">
+                <label for="r2">부산</label>
+                <input type="radio" name="city" value="3" id="r3">
+                <label for="r3">광주</label>
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;전화번호 <input type="tel" name="tell" id="r4" placeholder="010-888-8282">
+            </p>
+            <p><br><br>
+                <button type="submit">submit</button> 
+                <button type="reset">Reset</button>
+            </p>
+        </form>
+    <button id="question">질문 버튼</button> 
+    <p id="p"></p>
+    <script>
+        function first(){
+            let butt = document.getElementById('question');
+            butt.addEventListener("click", () => {
+                document.body.style.backgroundColor = 'yellow';
+            });
+        }
+ 
+        function change() {
+            let butt = document.getElementById('question');
+            butt.onclick = () => {
+            butt.style.backgroundColor = 'yellow'
+            let p = document.getElementById('p')
+            butt.innerHTML = "질문입니다."
+            p.innerHTML = "질문을 입력하세요."
+            }
+        }
+
+
+        //first();
+    </script>
+</body>
+</html>

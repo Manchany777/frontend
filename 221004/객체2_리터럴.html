@@ -21,6 +21,7 @@
             },
             deposit : function (money) {
                 this.balance += money;
+                return money;
             },
             withdraw : function (money) {
                 this.balance -= money;
@@ -38,10 +39,10 @@
         document.write(acc.code + ", ")
         document.write(acc.balance + "<br>")
 
-        acc.deposit(10000);
-        document.write("10000원 저금 후 잔액은 " + acc.inquiry() + "<br> ");
-        acc.withdraw(5000);
-        document.write("5000원 인출 후 잔액은 " + acc.inquiry() + "<br> ");
+        let money = acc.deposit(10000)
+        document.write(money + "원 저금 후 잔액은 " + acc.inquiry() + "<br> ");
+        money = acc.withdraw(5000)
+        document.write(money + "원 인출 후 잔액은 " + acc.inquiry() + "<br> ");
     </script>
     <script>
         function meetAt(year, month, day){

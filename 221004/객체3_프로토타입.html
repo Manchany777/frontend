@@ -22,6 +22,8 @@
                     console.log("당신의 잔액은 " + this.balance + " 입니다.");
                     } ;
 
+        
+
         this.deposit = function (money) { // 익명함수
                     // 숫자가 아닌 문자가 들어오면 ~~~~
                     if(isFinite(money)) {
@@ -32,7 +34,7 @@
                     }
                 } ;
 
-        this.withdraw = function (money){
+        this.withdraw = (money) => {             // ==>는 function과 동일
                         // 잔액보다 큰 금액은 인출 안되게, 숫자가 아닌 문자가 들어오면 ~~~~
                         if(isFinite(money)) {
                             if (this.balance < money) {
@@ -51,7 +53,11 @@
     var acc2 = new Account('박세리', '111-22-444444', 10000);
     var acc3 = new Account('황희찬', '111-22-555555', 20000);
  </script>
-
+ <script>
+    for (var key in acc1) { // 생판 처음 보는내용을 다 볼 수 있는 for in
+        console.log(key + ":" + acc1[key]);
+    }
+ </script>
  <script>
     console.log('예금주는 ' + acc1.owner + " 입니다.")
     console.log('계좌번호는 ' + acc1.code + " 입니다.")

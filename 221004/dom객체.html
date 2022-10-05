@@ -8,13 +8,52 @@
     <script>
         function change(b_color){
             if (b_color == 'black') {
-            document.body.style.backgroundColor = 'black';
-            document.body.style.color = 'white'
-        } else if (b_color == 'white') {
-            document.body.style.backgroundColor = 'white';
-            document.body.style.color = 'black'
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white'
+            } else if (b_color == 'white') {
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black'
+            } else if (b_color == 'text') {
+                document.getElementById('first').innerHTML = 'innerHTML<br>';
+                //document.querySelector('#first').innerText = 'innerText<br>';
+            }
         }
+
+        function change_button(obj, color){
+            obj.style.color = color;
+            console.log("버튼 위로 마우스가 올라왔습니다.")
         }
+
+
+        function class_check() {
+            // let btn = document.getElementsByClassName('btn');
+            // btn[1].innerText = '~~~~~~~~~~~';
+            // console.log(document.getElementsByClassName('btn'));
+            // let btn = document.querySelectorAll('.btn');
+            // [btn, btn, btn]
+            // btn[0].innerText = '~~~~~~~~~~~';
+            // console.log(btn)
+
+            let btn = document.querySelectorAll('.btn')
+            let a = function (e, i) {
+                console.log(`요소: ${e}`);
+                e.innerText = "%%%%%%"
+                console.log(`index: ${i}`);
+            }
+            function b(e, i) {
+                console.log(`요소: ${e}`);
+                e.innerText = "%%%%%%"
+                console.log(`index: ${i}`);
+            }
+            btn.forEach(b); 
+            btn.forEach((e, i) => {
+                console.log(`요소: ${e}`);
+                e.innerText = "%%%%%%"
+                console.log(`index: ${i}`);
+            })                      // 이 3개의 결과는 똑같다
+        }
+
+        // class_check();            -> 아무것도 안뜸 (아직 출력된 게 X)
     </script>
     <!-- <style>
          /*선택자*/
@@ -23,17 +62,50 @@
             background-color: yellow;
         }
     </style> -->
+<script>
+    function show(){
+        // 이미지가 보이게 한다
+        let img = document.getElementById('tim');
+        img.src = "Tim.jpg"
+        img.alt = "팀 버너스리"
+        img.width="300" 
+        img.height="200"
+    }
+    function hide(){
+        // 이미지가 안보이게 한다
+        let img = document.querySelector('#tim');
+        img.src = ""
+        img.alt = "팀 버너스리"
+    }
+</script>
 </head>
 <body>
-    <p>paragraph
+    <p id="first" style="background-color: yellow;" 
+    onclick="this.style.color='red'">
+        paragraph
         <span>span</span>
     </p>
-    <button onclick='change("black")'>
+
+    
+    <p><h2 onmouseover="show()" onmouseout="hide()">여기로 마우스 올리면 이미지가 보입니다</h2>
+    <img id="tim" src="" alt=""></p>
+
+    <button class="btn" onclick='change("black")'
+    onmouseover="change_button(this, 'red')">
         검은색 화면으로 변경
     </button>
-    <button onclick='change("white")'>
+    <button class="btn" onclick='change("white")'
+    onmouseover="change_button(this, 'green')">
         흰색 화면으로 변경
     </button>
+    <button class="btn" onclick="change('text')" 
+    onmouseover="change_button(this, 'blue')">
+    p태그와 innerHTML 변경
+    </button>
+
+    <script>
+        class_check();
+    </script>
 </body>
 </html>
 

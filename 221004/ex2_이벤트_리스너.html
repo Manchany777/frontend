@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="alert(event.type + ' :' + event.target)">
+    <p>이것은 문장입니다.</p>
+    <input type="text" name="any">
+    <hr>
+
+    <script>
+        function f(e) {
+            alert(e.type + ": " + e.target + ": " + e.x + ": " + e.y + ": " + e.button); //오른쪽 클릭이면 2, 왼쪽클릭이면 0
+        }
+    
+    </script>
+    <button onmousedown="f(event)" onclick='f(event)'>버튼</button>
+    <div onclick='alert(event.type + " :" + event.target)'>버튼</div>
+</body>
+</html>

@@ -128,3 +128,23 @@ CSS스타일                      style ="
 컬렉션
 이벤트 리스너
 CSS3 스타일
+
+
+*이벤트리스너 = 이벤트리스너의 이름 + 이벤트리스너의 코드 - 속성(값)
+                      onmouseover ="change_button(this, 'green')"
+
+
+function () {} 
+= 
+() => {}
+
+
+<자료구조>
+
+1) 배열 - C, java, python, javascript 
+(indexing 방법으로 보여줌)
+
+2) tree - BOM, DOM
+(계층구조 : 사장(root node) - 말단(leaf  node))
+               (말단끼리는 sibling)
+*하나하나의 node = element = 객체
