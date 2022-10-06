@@ -2,6 +2,9 @@
 get - 보안x (적지 않을시 디폴트)
 post -  보안o
 
+inline -> 텍스트 구조
+block -> 박스구조
+
 
 1.html -> 왜 span 값이 블록으로?
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 */
+        /* body { 
+            background-color: yellow;
+        }*/
+    </style> 
+    <script>
+        function change(b_color){
+            if (b_color == 'black'){
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+            } else if (b_color == 'white'){
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+            } else if (b_color == 'text') {
+                document.getElementById('first').innerHTML = 'innerHTML<br>';
+                /*document.querySelector('#first').innerText = 'innerText<br>';*/
+            }
+        }
+
+        function change_button(obj, color){
+            obj.style.color = color;
+        }
+
+        function class_check(){
+            // let btn = document.getElementsByClassName('btn');
+            // btn[2].innerText = "~~~~~~~~~~~~~~~~~~~~";
+            // [btn , btn, btn]
+            //btn[2].innerText = "~~~~~~~~~~~~~~~~~~~~";
+
+            let btn = document.querySelectorAll('.btn')
+
+            btn.forEach( (e, i) => {
+                console.log(`요소: ${e}`);
+                e.innerText = "@@@"
+                console.log(`index: ${i}`);
+            });
+
+        }
+
+        function show() {
+           let img = document.getElementById('tim');
+           img.src = "tim.jpg";
+           img.alt = "팀 버너스리";
+        }
+
+        function hide() {
+           let img = document.querySelector('#tim');
+           img.src =  "";
+           img.alt = "팀 버너스리";
+        }
+
+        // class_check();
+    </script>
+</head>
+<body>
+    <p id="first" style="background-color: yellow" onclick="this.style.color='red'"> 
+        paragraph
+        <span>span</span>
+    </p>
+
+    <h2 onmouseover="show()" onmouseout="hide()">여기로 마우스 올리면 이미지가 보입니다.</h2>
+    <img id="tim" src="" alt="" >
+
+    <button class = 'btn' 
+    onclick='change("black")'
+    onmouseover="change_button(this, 'red')">
+    검정색화면으로 변경
+    </button>
+    <button class = 'btn' onclick='change("white")'
+    onmouseover="change_button(this, 'green')">
+    흰색화면으로 변경
+    </button>
+    <button class = 'btn' onclick="change('text')"
+    onmouseover="change_button(this, 'blue')">
+        p 태그의 innerHTML 변경
+    </button>
+
+    <script>
+        
+        class_check();
+    </script>
+</body>
+</html>

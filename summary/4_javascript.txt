@@ -139,6 +139,12 @@ function () {}
 () => {}
 
 
+
+익명함수의 또 다른 이름 -> 콜백함수
+
+
+
+
 <자료구조>
 
 1) 배열 - C, java, python, javascript 

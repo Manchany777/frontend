@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>선택된 라디오 버튼 알아내기</h3>
+    <hr>
+    <form action="">
+        <label>
+            <input type="radio" name="district" value="1" checked onchange="radioChange()">서울
+        </label>
+        <label>
+            <input type="radio" name="district" value="2" onchange="radioChange()">부산
+        </label>
+        <label>
+            <input type="radio" name="district" value="3" onchange="radioChange()">광주
+        </label><br>
+    </form>
+    <script>
+        function radioChange() {
+            var radio = document.getElementsByName('district');
+            radio.forEach((e, i) => {
+                if (e.checked == true) {
+                    alert(e.value);
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

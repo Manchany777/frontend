@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="change()">
+    <h1>이벤트는 언제 발생하는 거야?</h1>
+    <hr>
+    <img src="강아지.jpg" alt="강아지" height="100" width="170">
+    <h3>강아지를 분양합니다. 잘 키워주실 분 연락처 남겨주세요.</h3>    
+    <hr>
+        
+    <form action="" method="get">
+        도시
+        <label>
+            <input type="radio" name="district" value="1">서울
+        </label>
+        <label>
+            <input type="radio" name="district" value="2">부산
+        </label>
+        <label>
+            <input type="radio" name="district" value="3">광주
+        </label><br>
+        <label>전화번호
+            <input type="tel" name="phone">
+        </label><br><br>
+        
+
+        <!--button type="submit" onclick="">submit</button>
+        <button type="reset">reset</button-->
+    </form>
+
+    <button id="q">질문 버튼</button>
+    <p id="p"></p>
+
+    <script>
+        //  function first(){
+        //     let button = document.getElementById('q');
+        //     button.addEventListener("click",  () =>{
+        //         document.body.style.backgroundColor = 'yellow';
+        //     })
+        // }
+
+        function change() {
+            let button = document.getElementById('q');
+            button.onclick =  () =>{
+                let p = document.getElementById('p')
+                p.innerHTML = "질문입니다."
+                p.style.backgroundColor = 'orchid';
+                
+            }
+        }
+        //first();
+    </script>
+</body>
+</html>
