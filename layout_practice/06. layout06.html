@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout06</title>
+    <style>
+        *{margin: 0; padding: 0}
+        #wrap {font-size: 30px; text-align: center; text-transform: uppercase; color: #fff;}
+        #header {height: 140px; line-height: 140px; background: #ffe1e4;}
+        #banner {height: 450px; line-height: 450px; background: #fbd6e3;}
+        #contents {height: 950px; line-height: 950px; background: #ead5ee;}
+        #footer {height: 220px; line-height: 220px; background: #d6ebfd;}
+        
+        /*.header-container {width: 1100px; height: 140px; margin: 0 auto; background: #999;}     참고)background: #999; ==> 헥사코어 모드
+        .banner-container {width: 1100px; height: 450px; margin: 0 auto; background: #888;}
+        .contents-container {width: 1100px; height: 950px; margin: 0 auto; background: #777;}
+        .footer-container {width: 1100px; height: 220px; margin: 0 auto; background: #666;}       이 코드를 아래처럼 간결하게 만들 수 있다.*/
+        
+        .container {width: 1100px; height: inherit; margin: 0 auto; background: rgba(0,0,0,0.3);} /*height: inherit  ==> 위에서 상속받음
+                                                                                                    background: rgba(0,0,0,0.3); ==> rgba모드
+                                                                                                                     r,g,b,코드(투명도 0부터 1사이의 실수)
+    </style> 
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <div id="contents">
+            <div class="container">contents</div>
+        </div>
+        <div id="footer">
+            <div class="container">footer</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -8,13 +8,23 @@
 인터프리터 -> 한 번에 한 문장씩 번역 / 실행시간 더 걸림 / 메모리 효율 좋음
                    실행해야만 오류 발견 / Python, Ruby, Javascript
 
+c+tab -> 주석
 
 wrap ==> 아래의 레이아웃을 묶어주는 성질
 wrap {margin: 0 auto;} ==> 가운데 정렬(위아래 간격 0, 좌우 간격 자동)
-wrap {text-transform: uppercase}
+wrap {text-transform: uppercase}  ==> 바디의 텍스트를 대문자로
 
 float: letf; ==> 블록구조 정렬
 clear: both; ==> 플롯 레프트의 성질을 차단시켜주는 속성
 line-height: ~px;  => 문장과 문장사이의 간격을 설정 
  (각 레이아웃의 height와 동일하게 설정시 텍스트를 정중앙에 오게 만듦)
+
+* {margin: 0; padding: 0;} -> 약식 전체 선택자 (실무에서는 안 씀)
+                                     바탕여백을 0으로 만듦
+
+width값은 100%가 기본값, 100%로 하려면 굳이 적을 필요없다.
+height값이 부모와 자식이 동일하면 부모쪽은 굳이 적을 필요없다.
+
+뉴렉처 -> 백엔드 기반 
+Webstoryboy
 

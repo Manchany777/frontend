@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout05</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #wrap {width: 100%; color: #fff; font-size: 30px; text-align: center; text-transform: uppercase;}  /*width값, height값 여기다 적어줘도 됨*/
+        #header-wrap {width: 100%; background-color: #8d6e63;}             /*부모(배경)*/
+        #banner-wrap {width: 100%; background-color: #a1887f;}             /*width값은 100%가 기본값이라 100%로 할거면 굳이 안적어도 된다.*/
+        #content-wrap {width: 100%; background-color: #bcaaa4;}            /*height값은 부모와 자식이 같으면 부모쪽엔 굳이 안적어도 된다.*/
+        #footer-wrap {width: 100%; background-color: #d7ccc8;}
+        
+        .header-container {width: 1000px; height: 100px; margin: 0 auto; line-height: 100px; background-color: #3e2723;} /*자식(박스)*/
+        .banner-container {width: 1000px; height: 300px; margin: 0 auto; line-height: 300px; background-color: #4e342e;}
+        .content-container {width: 1000px; height: 500px; margin: 0 auto; line-height: 500px; background-color: #5d4037;}
+        .footer-container {width: 1000px; height: 100px; margin: 0 auto; line-height: 100px; background-color: #6d4c41;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header-wrap">
+            <div class="header-container">header</div>
+        </div>
+        <div id="banner-wrap">
+            <div class="banner-container">banner</div>
+        </div>
+        <div id="content-wrap">
+            <div class="content-container">content</div>
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container"footer>footer</div>
+        </div>
+    </div>
+</body>
+</html>
