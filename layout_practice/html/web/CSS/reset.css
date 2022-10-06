@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* 여백 초기화 */
+body,
+div,
+ul,
+li,
+dl,
+dt,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+fieldset,
+legend,
+p,
+select,
+table,
+th,
+td,
+tr,
+textarea,
+button,
+form {
+    margin: 0; 
+    padding: 0;
+}
+/* 전체 태그(*)가 아닌 내가 필요한 태그만 골라서 지정해 준 경우 */
+
+/* a 링크 초기화 */
+a {color: #222; text-decoration: none;}          /* text-decoration: none --> 링크 및의 선을 없애준다 */
+a:hover {color: #390;}

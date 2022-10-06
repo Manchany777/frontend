@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* 스킵 내비게이션 */
+#skip {position: relative;}                                              /* <- 이곳의 skip은 아래 absolute포지션의 기준점이 된다. */
+#skip a {position: absolute; left: 0px; top: -35px; border: 1px solid #fff; color: #fff; background: #333; 
+    line-height: 30px; width: 170px; text-align: center;}              /* position: absolute -> 절대적인 위치로 옮겨줌 (but, 영역이 사라져서 붕뜨는 느낌이 난다.) */
+#skip a:active,                                                        /* 활성화 또는 포커스 명령어 (평소에는 top을 -35로 줘서 위로 숨겨놓는다.) */
+#skip a:focus {top: 0;}
+                                        /* 참고: absolute는 상위 요소중 가장 가까운 포지션(position)으로부터 지정하는 양만큼 오프셋 되어 다시 위치를 잡는다. 
+                                        relative(상대적) 배치 요소는 문서 흐름 속에 남아 있지만(즉, 상대적 관계 속에 존재한다), 절대 위치(absolute)에 있는 요소는 전체적 문서 흐름에서 제외된다.
+                                        absolute - 정상적인 문서 흐름에 따라 요소가 배치가 된다. VS absolute - 정상적인 문서 흐름에 따라 제외된다.*/
+
+
+
+
+
+
+
+/* 레이아웃 */
+#wrap {width: 100%;}
+#header {width: 100%; height: 325px; background: #111;}
+#contents {width: 100%;height: 800px; background: #222; }
+#footer {width: 100%; height: 200px; background: #333;}
+
+/* 컨텐츠 레이아웃 */
+#cont_nav {width: 100%; height: 200px; background: #444;}
+#cont_tit {width: 100%; height: 200px; background: #555;}
+#cont_ban {width: 100%; height: 200px; background: #666;}
+#cont_cont {width: 100%; height: 200px; background: #777;}
+
+/* 컨테이너 */
+.container {width: 990px; margin: 0 auto; height: inherit; background: rgba(255,255,255,0.3);}
