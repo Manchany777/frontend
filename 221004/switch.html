@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fruits = "사과";
+        var price = 0;
+        if (fruits == "사과"){
+            price = 1000;
+        } else if (fruits == "바나나"){
+            price = 2000;
+        } else if (fruits == "딸기"){
+            price = 3000;
+        } else {
+            price = 5000;
+        }
+        console.log(price);
+
+
+        fruits = "바나나";
+        switch(fruits){
+            case '사과' : {
+                price = 1000;
+                break;
+            }
+            case '바나나' : {
+                price = 2000;
+                break;
+            }
+            case '딸기' : {
+                price = 3000;
+                break;
+            }
+            default :                      //if문의 else = default//
+                price = 5000;              //switch문은 break가 따로 필요, 안그러면 조건 만족해도 중간에 안빠지고 끝까지 간다//
+        }
+        console.log(price);                //case에다 변수나 식을 넣을 수 없다. (딱 떨어지는)값만 넣을 수 있다.//
+
+
+        var day = "목";
+        switch(day){
+            case '월' :
+            case '화' :
+            case '수' :
+            case '목' :
+            case '금' :
+                console.log("평일입니다.");
+                break;
+            case '토' :
+            case '일' :
+                console.log("휴일입니다.");
+                break;
+            default:
+                console.log("오류입니다.")
+        }
+    </script>
+</body>
+</html>

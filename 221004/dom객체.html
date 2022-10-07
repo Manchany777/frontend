@@ -7,17 +7,42 @@
     <title>Document</title>
     <script>
         function change(b_color){
-            if (b_color == 'black') {
-                document.body.style.backgroundColor = 'black';
-                document.body.style.color = 'white'
-            } else if (b_color == 'white') {
-                document.body.style.backgroundColor = 'white';
-                document.body.style.color = 'black'
-            } else if (b_color == 'text') {
-                document.getElementById('first').innerHTML = 'innerHTML<br>';
-                //document.querySelector('#first').innerText = 'innerText<br>';
+            const b = document.body;
+            switch (b_color) {
+                case 'black' :
+                    b.style.backgroundColor = '';
+                    b.style.color = 'white'
+                    break;
+                case 'white' :
+                    b.style.backgroundColor = 'white';
+                    b.style.color = 'black'
+                    break;                
+                case 'text' :
+                    document.getElementById('first').innerHTML = 'innerHTML<br>';
+                    break; 
+                default : 
+                    if (b.style.backgroundColor == 'black') {
+                        b.style.backgroundColor = 'white';
+                        b.style.color = 'black'
+                    } else {
+                        b.style.backgroundColor = 'black';
+                        b.style.color = 'white'
+                    }
             }
         }
+
+        
+            // if (b_color == 'black') {
+            //     document.body.style.backgroundColor = 'black';
+            //     document.body.style.color = 'white'
+            // } else if (b_color == 'white') {
+            //     document.body.style.backgroundColor = 'white';
+            //     document.body.style.color = 'black'
+            // } else if (b_color == 'text') {
+            //     document.getElementById('first').innerHTML = 'innerHTML<br>';
+            //     //document.querySelector('#first').innerText = 'innerText<br>';
+            // }
+
 
         function change_button(obj, color){
             obj.style.color = color;
@@ -102,6 +127,8 @@
     onmouseover="change_button(this, 'blue')">
     p태그와 innerHTML 변경
     </button>
+
+    <button onclick="change()">토글</button>
 
     <script>
         class_check();

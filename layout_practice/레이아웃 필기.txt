@@ -45,3 +45,7 @@ Webstoryboy
 <CSS>
 @charset "utf-8";    ===> 전세계 언어 지정해주는 명령어 (한글도 안깨지고 호환 가능하게 됨)
 *항상 레이아웃을 잡은 후에는 확인을 위해서 백그라운드를 임시로 만들어 영역이 제대로 잡혔는지 확인하는 습관이 필요함
+
+backbround : background-color background-image background-repeat background-attachment background-position
+                           배경색               이미지                 반복                       고정                     위치
+    ==> 속기형 작성법 (한 번에 여러가지 속성을 지정)

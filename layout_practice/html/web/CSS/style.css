@@ -18,7 +18,7 @@
 
 /* 레이아웃 */
 #wrap {width: 100%;}
-#header {width: 100%; height: 325px; background: #111;}
+#header {width: 100%; height: 325px; background: url(../img/header_bg.jpg) center top repeat-x;}    /* -> 상대참조 url & 왼쪽 기준으로 정렬된 이미지를 센터 위쪽으로 위치설정(화면 확대축소시 이미지 위치가 계속 바뀌는 것을 방지) & 상하좌우 이미지 패턴반복 방지 */
 #contents {width: 100%;height: 800px; background: #222; }
 #footer {width: 100%; height: 200px; background: #333;}
 
@@ -30,3 +30,24 @@
 
 /* 컨테이너 */
 .container {width: 990px; margin: 0 auto; height: inherit; background: rgba(255,255,255,0.3);}
+
+/* 헤더 */
+.header {}
+.header .header-menu {text-align: right;}    
+            /* 1-2 so, a태그의 부모인 <= 얘한테 right를 줘야 그 밑에 있는 인라인 구조인 글씨들이 오른쪽으로 먹히는 것*/
+.header .header-menu a {color: #fff; padding: 10px 0px 10px 13px; display: inline-block;}     
+                                            /* 위 오른쪽 아래 왼쪽 */
+            /* 1-1 a태그는 인라인 속성이기때문에 오른쪽 정렬해봐야 안먹힘(전체영역이 없고 자기 자신이 전체영역이다)*/
+            /* 2. inline-block ==> inline 성질을 가지면서 blokc성질로 바꿔주는 태그 (padding 위아래가 안먹히는 inline태그의 특성상 이렇게 설정해줘야함) */
+.header .header-menu a:hover {color: #666;}
+.header .header-tit {}  /* 아무것도 없다고 해서 중괄호를 안적으면 읽다가 에러남 */
+.header .header-tit h1 {text-align: center; background-color: #4aa8d4; font-size: 28px; padding: 10px;}   /* h1은 블록구조라 전체넓이가 있기때문에 이렇게 해도 가운데 정렬이 가능 & h1태그는 자식이니까 center도 자식에 넣어줘야 */
+.header .header-icon {}
+
+/* 위의 태그는 아래처럼 바꿔도 가능. but, css의 부모자식 구조를 알기 어려워지기 때문에 길지 않는 이상은 위 정도로는 구별을 해주는게 관리측면에서 좋다.
+.header {}
+.header-menu {text-align: right;}
+.header-menu a {color: #fff; padding: 10px 0px 10px 13px; display: inline-block;}
+.header-menu a:hover {color: #666;}
+.header-tit {}
+.header-icon {} */
