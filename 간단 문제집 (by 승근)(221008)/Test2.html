@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제2번</title>
+    <h1> 객관식 문제 2번이다. </h1>
+</head>
+<body>
+    <fieldset>
+        <legend> <h1> 다음문제를 보고 정답을 맞추시오 </h1> </legend>
+        <form name="form">
+            <p> 
+                지역변수와 전역 변수를 설명한 것으로 맞지 않은 것은?
+            </p>
+            <br>
+            <fieldset>
+                <input type="radio" name="question2" value="v1" id="r1">
+                    <label for="r1"> 지역변수 - 함수 내 var 키워드로 선언한다. </label> <br>
+                <input type="radio" name="question2" value="v2" id="r2">
+                    <label for="r2"> 지역 변수 - 선언된 함수 내에서만 활동한다. </label> <br>
+                <input type="radio" name="question2" value="v3" id="r3">
+                    <label for="r3"> 전역 변수 - 한정된 form에서만 활동한다. </label> <br>
+                <input type="radio" name="question2" value="v4" id="r4">
+                    <label for="r4"> 전역 변수 - 함수 내 var 키워드 없이도 선언된다. </label> <br>
+                <input type="radio" name="question2" value="v5" id="r5">
+                    <label for="r5"> 지역 변수가 전역 변수보다 사용율이 높다. </label> <br>
+            </fieldset> <br>
+        </form>
+        <button type="button" onClick="question();"> 다음으로 </button>
+    </fieldset>
+    <script type="text/javaScript">
+        function question(){
+            location.href="Test3.html"
+                if(form.question2[2].checked==true) 
+                    alert("정답입니다.");
+                else 
+                    alert("오답입니다.");
+        }
+    </script>
+</body>
+</html>
