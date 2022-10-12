@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        function check(cbox){
+            const tot = document.getElementById("total")
+            if(cbox.checked){
+                tot.value = Number(tot.value) + Number(cbox.value);
+            } else {
+                tot.value = Number(tot.value) - Number(cbox.value);
+            }
+        }
+
+        function change(){
+            //document.body.style.backgroundColor = 'bisque';
+            $('body').css('background-color', 'bisque');
+        }
+
+        function htmlChange(){
+            //const p = document.getElementById('p');
+            //p.innerHTML = "Apple";
+            $('#p').html('Apple');
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label>
+            모자 1만원
+            <input type="checkbox" name="prod" value="10000" onclick="check(this)">
+        </label>
+        <label>
+            구두 3만원
+            <input type="checkbox" name="prod" value="30000" onclick="check(this)">
+        </label>
+        <label>
+            가방 8만원
+            <input type="checkbox" name="prod" value="80000" onclick="check(this)">
+        </label>   
+        <p>총금액<input type="text" id="total"></p>
+    </form>
+    <p id="p">aaaa</p>
+
+    <button onclick="change()"></button>
+    <button onclick="htmlChange()"></button>
+</body>
+</html>

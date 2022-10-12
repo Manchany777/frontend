@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    
+</head>
+<body>
+    <h3>식사 메뉴 추천</h3><hr>
+    
+    
+
+
+    
+    <script>
+       var menu = new Array() ;
+        menu[0] = '굶기';
+        menu[1] = '순댓국밥';
+        menu[2] = '두루치기';
+        menu[3] = '뚝배기불고기';
+        menu[4] = '비빔밥';
+        menu[5] = '김밥';
+        menu[6] = '잔치국수';
+        menu[7] = '짜장면';
+        menu[8] = '짬뽕';
+        menu[9] = '볶음밥';
+        
+        console.log(menu);
+
+        var food = new Array() ;
+        food[0] =  
+        food[1] = "https://img.hankyung.com/photo/202112/99.28318404.1.jpg"  ;
+        food[2] = 'https://img.nbntv.co.kr/resources/2019/01/28/m_AnpaF1wWKLYnX8ex.jpg' ;
+        food[3] = 'https://imagescdn.gettyimagesbank.com/500/201709/a10996920.jpg';
+        food[4] = 'https://health.chosun.com/site/data/img_dir/2021/01/27/2021012702508_0.jpg';
+        food[5] = 'https://thumb.mt.co.kr/06/2022/07/2022072822165669461_1.jpg/dims/optimize/';
+        food[6] = 'https://semie.cooking/image/comment/cs/us/avubmpar/74605908mrbf.jpg';
+        food[7] = 'https://www.newiki.net/w/images/thumb/d/d9/Jjajangmyeon.jpg/675px-Jjajangmyeon.jpg';
+        food[8] = 'https://www.newiki.net/w/images/thumb/1/11/Jjampong.jpg/675px-Jjampong.jpg';
+        food[9] = 'http://image.chosun.com/sitedata/image/201307/18/2013071802359_0.jpg';
+        
+        console.log(food);
+
+        
+
+        
+
+        function arrPush() { 
+            let r = Math.floor(Math.random()*10);
+            console.log(r);
+            let random = menu[r];
+            let random2 = food[r];
+            // console.log(random);
+            // console.log(random2); 
+            document.querySelector("p").innerText=random;
+            document.querySelector("img").src=random2;
+            return menu[random];
+            return food[random2];
+
+            
+        
+        }
+        
+
+        
+    </script>
+
+        <p></p>
+        <img style="width: 200px ;" align="center ;"    src="" alt=""> <br>
+    
+    <input type="button" value="random" onclick="arrPush()"><br> <br>
+
+    
+    
+    
+</body>
+</html>

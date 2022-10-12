@@ -128,11 +128,27 @@
       </table>
 
 
-    <button type="button" class="btn btn-primary">버튼1</button>
-    <button type="button" class="btn btn-success">버튼2</button>
+    <button type="button" class="btn btn-primary" onclick="delNode()">이미지노드 삭제</button>
+    <button type="button" class="btn btn-success" onclick="crtNode()">노드 추가</button>
     <button type="button" class="btn btn-dark">버튼3</button>
 
 
+    <script>
+        function delNode() {
+            let cNode = document.getElementById('second');
+            if(cNode){
+                document.body.removeChild(cNode);    
+            }    
+        }
+
+        function crtNode(){
+            const a = document.createElement("a");
+            a.innerText = "1.html";
+            a.setAttribute('href', '1.html');
+            const p = document.querySelector('#first');
+            p.appendChild(a);
+        }
+    </script>
 
 </body>
 

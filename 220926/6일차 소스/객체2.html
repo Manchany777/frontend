@@ -13,36 +13,35 @@
         owner : '홍길동',
         code : '101-39-777777',
         balance : 35000,
-
         inquiry : function () { // 익명함수
-                console.log(this === window);
-                console.log(this);
-                console.log("당신의 잔액은 " + this.balance + " 입니다.");
-                } ,
+                    console.log(this === window);
+                    console.log(this);
+                    console.log("당신의 잔액은 " + this.balance + " 입니다.");
+                    } ,
 
         deposit : function (money) { // 익명함수
-                // 숫자가 아닌 문자가 들어오면 ~~~~
-                if(isFinite(money)) {
-                    this.balance += money;
-                    console.log("입금 완료 , 잔액은 " + this.balance + " 입니다.");
-                } else {
-                    console.log("입력오류");
-                }
-            } ,
-
-        withdraw : function (money) { // 익명함수
-                // 잔액보다 큰 금액은 인출 안되게, 숫자가 아닌 문자가 들어오면 ~~~~
-                if(isFinite(money)) {
-                    if (this.balance < money) {
-                        console.log("잔액이 부족합니다.");
+                    // 숫자가 아닌 문자가 들어오면 ~~~~
+                    if(isFinite(money)) {
+                        this.balance = this.balance + money;
+                        console.log("입금 완료 , 잔액은 " + this.balance + " 입니다.");
                     } else {
-                        this.balance -= money;
-                        console.log("출금 완료 , 잔액은 " + this.balance + " 입니다.");
+                        console.log("입력오류");
                     }
-                } else {
-                    console.log("입력오류");
-                }
-            }
+                } ,
+
+        withdraw : function (money){ // 익명함수
+                        // 잔액보다 큰 금액은 인출 안되게, 숫자가 아닌 문자가 들어오면 ~~~~
+                        if(isFinite(money)) {
+                            if (this.balance < money) {
+                                console.log("잔액이 부족합니다.");
+                            } else {
+                                this.balance = this.balance - money;
+                                console.log("출금 완료 , 잔액은 " + this.balance + " 입니다.");
+                            }
+                        } else {
+                            console.log("입력오류");
+                        }
+                    }
 
         }
 
